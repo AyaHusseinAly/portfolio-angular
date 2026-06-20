@@ -1,0 +1,32 @@
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <span class="footer__shape">{{ profile.initials }}</span>
+      <p>{{ profile.name }}</p>
+      <span class="footer__tagline">Let's connect and build something great together!</span>
+    </div>
+
+    <div class="footer__links">
+      <h4>Quick Links</h4>
+      @for (link of quickLinks; track link.href) {
+        <a [href]="link.href">{{ link.label }}</a>
+      }
+    </div>
+
+    <div class="footer__contact">
+      <h4>Contact</h4>
+      <p>{{ profile.email }}</p>
+      <p>{{ profile.whatsappDisplay }}</p>
+      <p>{{ profile.location }}</p>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; {{ year }} {{ profile.name }}. Built with Angular.</p>
+    <div class="footer__social">
+      <a [href]="profile.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a [href]="profile.whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </div>
+</footer>

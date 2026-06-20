@@ -1,0 +1,41 @@
+<section class="section experience" id="experience">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__eyebrow">Experience</span>
+      <h2 class="section__title">Work History</h2>
+      <p class="section__subtitle">
+        Building scalable applications across telecom, CRM, and enterprise platforms.
+      </p>
+    </div>
+
+    <div class="timeline">
+      @for (job of experience; track job.company; let i = $index) {
+        <article class="timeline__item" [class.timeline__item--alt]="i % 2 === 1">
+          <div class="timeline__dot" [class]="'timeline__dot--' + job.shape"></div>
+          <div class="exp-card" [class]="'exp-card--' + job.shape">
+            <div class="exp-card__shape" aria-hidden="true"></div>
+            <div class="exp-card__header">
+              <img [src]="job.logo" [alt]="job.company + ' logo'" width="48" height="48" />
+              <div>
+                <h3>{{ job.company }}</h3>
+                <p class="exp-card__role">{{ job.role }}</p>
+              </div>
+              <span class="exp-card__period">{{ job.period }}</span>
+            </div>
+            <p class="exp-card__location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z" /><circle cx="12" cy="10" r="3" />
+              </svg>
+              {{ job.location }}
+            </p>
+            <ul class="exp-card__highlights">
+              @for (item of job.highlights; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

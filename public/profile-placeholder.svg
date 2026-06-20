@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none">
+  <rect width="320" height="320" fill="#DECEBF"/>
+  <circle cx="160" cy="120" r="56" fill="#A1A79E"/>
+  <ellipse cx="160" cy="260" rx="90" ry="70" fill="#A1A79E"/>
+  <text x="160" y="300" text-anchor="middle" fill="#68756D" font-family="system-ui,sans-serif" font-size="14">Fatma Tarek</text>
+</svg>

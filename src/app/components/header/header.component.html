@@ -1,0 +1,27 @@
+<header class="header" [class.scrolled]="scrolled()" [class.menu-open]="menuOpen()">
+  <div class="container header__inner">
+    <a class="logo" href="#home" (click)="closeMenu()">
+      <span class="logo__shape">{{ profile.initials }}</span>
+      <span>{{ profile.name }}</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle menu"
+      (click)="toggleMenu()"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav">
+      @for (link of navLinks; track link.href) {
+        <a class="nav__link" [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+      }
+      <a class="btn btn--sm" [href]="profile.github" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+    </nav>
+  </div>
+</header>

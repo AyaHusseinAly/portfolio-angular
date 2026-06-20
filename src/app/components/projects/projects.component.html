@@ -1,0 +1,64 @@
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__eyebrow">Portfolio</span>
+      <h2 class="section__title">Featured Projects</h2>
+    </div>
+
+    <div class="projects__filters">
+      @for (filter of filters; track filter.key) {
+        <button
+          class="filter-btn"
+          [class.filter-btn--active]="activeFilter() === filter.key"
+          type="button"
+          (click)="setFilter(filter.key)"
+        >
+          {{ filter.label }}
+        </button>
+      }
+    </div>
+
+    <div class="projects__grid">
+      @for (project of filteredProjects(); track project.id) {
+        <article class="project-card" [class]="'project-card--' + project.shape">
+          <div class="project-card__image">
+            <img [src]="project.image" [alt]="project.title" width="400" height="240" />
+            <span class="project-card__category">{{ project.category }}</span>
+          </div>
+          <div class="project-card__body">
+            <h3>{{ project.title }}</h3>
+            <p class="project-card__overview">{{ project.overview }}</p>
+
+            @if (project.contributions.length > 0) {
+              <div class="project-card__section">
+                <h4>Key Contributions</h4>
+                <ul>
+                  @for (item of project.contributions; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              </div>
+            }
+
+            <div class="project-card__tech">
+              @for (tag of project.tech; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+
+            @if (project.improvements.length > 0) {
+              <div class="project-card__section project-card__section--muted">
+                <h4>Improvements</h4>
+                <ul>
+                  @for (item of project.improvements; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              </div>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#F4F3F1"/>
+  <circle cx="130" cy="120" r="50" fill="#DECEBF" stroke="#68756D" stroke-width="2"/>
+  <circle cx="270" cy="120" r="50" fill="#DECEBF" stroke="#B57B66" stroke-width="2"/>
+  <path d="M175 120 L225 120" stroke="#A1A79E" stroke-width="3"/>
+  <path d="M225 120 L175 120" stroke="#A1A79E" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="130" y="125" text-anchor="middle" fill="#68756D" font-family="system-ui,sans-serif" font-size="12" font-weight="600">SF</text>
+  <text x="270" y="125" text-anchor="middle" fill="#B57B66" font-family="system-ui,sans-serif" font-size="12" font-weight="600">BH</text>
+  <text x="200" y="210" text-anchor="middle" fill="#68756D" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Data Sync</text>
+</svg>

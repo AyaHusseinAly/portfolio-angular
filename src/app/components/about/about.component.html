@@ -1,0 +1,55 @@
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__eyebrow">About Me</span>
+      <h2 class="section__title">Who I Am</h2>
+      <p class="section__subtitle">{{ profile.summary }}</p>
+      <p class="section__subtitle section__subtitle--accent">{{ profile.focus }}</p>
+    </div>
+
+    <div class="stats-row">
+      @for (stat of stats; track stat.label) {
+        <div class="stat-card" [class]="'stat-card--' + stat.shape">
+          <span class="stat-card__value">{{ stat.value }}</span>
+          <span class="stat-card__label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="skills-grid">
+      @for (skill of skills; track skill.name) {
+        <article class="skill-card" [class]="'skill-card--' + skill.shape">
+          <div class="skill-card__shape" aria-hidden="true"></div>
+          <div class="skill-card__icon">
+            @switch (skill.icon) {
+              @case ('code') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
+                </svg>
+              }
+              @case ('server') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <rect x="2" y="2" width="20" height="8" rx="2" /><rect x="2" y="14" width="20" height="8" rx="2" />
+                  <line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" />
+                </svg>
+              }
+              @case ('database') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                </svg>
+              }
+              @case ('cloud') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                </svg>
+              }
+            }
+          </div>
+          <h3 class="skill-card__name">{{ skill.name }}</h3>
+          <p class="skill-card__desc">{{ skill.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

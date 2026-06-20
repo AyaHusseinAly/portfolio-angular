@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#DECEBF"/>
+  <circle cx="24" cy="24" r="14" fill="#B57B66" opacity="0.85"/>
+  <text x="24" y="28" text-anchor="middle" fill="#F4F3F1" font-family="system-ui,sans-serif" font-size="8" font-weight="700">VOD</text>
+</svg>

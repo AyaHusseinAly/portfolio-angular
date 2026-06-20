@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#F4F3F1"/>
+  <rect x="140" y="60" width="120" height="100" rx="8" fill="#DECEBF"/>
+  <path d="M160 60 L200 40 L240 60" stroke="#68756D" stroke-width="3" fill="none"/>
+  <circle cx="270" cy="90" r="16" fill="#B57B66"/>
+  <text x="200" y="200" text-anchor="middle" fill="#68756D" font-family="system-ui,sans-serif" font-size="18" font-weight="600">Perfect Store</text>
+</svg>

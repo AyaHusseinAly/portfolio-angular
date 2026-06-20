@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#F4F3F1"/>
+  <rect x="60" y="40" width="280" height="160" rx="8" fill="#DECEBF"/>
+  <rect x="80" y="60" width="60" height="40" rx="4" fill="#68756D" opacity="0.6"/>
+  <rect x="150" y="60" width="60" height="40" rx="4" fill="#B57B66" opacity="0.7"/>
+  <rect x="220" y="60" width="60" height="40" rx="4" fill="#A1A79E" opacity="0.6"/>
+  <rect x="290" y="60" width="30" height="40" rx="4" fill="#A1A79E" opacity="0.35"/>
+  <polyline points="80,130 120,110 160,125 200,95 240,115 280,100 320,120" stroke="#B57B66" stroke-width="3" fill="none"/>
+  <text x="200" y="210" text-anchor="middle" fill="#68756D" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Analytics Dashboard</text>
+</svg>

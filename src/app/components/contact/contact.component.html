@@ -1,0 +1,34 @@
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__eyebrow">Contact</span>
+      <h2 class="section__title">Get In Touch</h2>
+      <p class="section__subtitle">
+        I'm always interested in new opportunities and exciting projects. Let's work together and
+        bring your ideas to life.
+      </p>
+    </div>
+
+    <div class="contact__grid">
+      @for (card of contactCards; track card.label) {
+        <a
+          class="contact-card"
+          [class]="'contact-card--' + card.shape"
+          [href]="card.href"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="contact-card__shape" aria-hidden="true"></div>
+          <span class="contact-card__label">{{ card.label }}</span>
+          <span class="contact-card__value">{{ card.value }}</span>
+        </a>
+      }
+    </div>
+
+    <div class="contact__cta shape-card">
+      <div class="shape-card__accent"></div>
+      <p>Ready to collaborate?</p>
+      <a class="btn" [href]="'mailto:' + profile.email">Send an Email</a>
+    </div>
+  </div>
+</section>

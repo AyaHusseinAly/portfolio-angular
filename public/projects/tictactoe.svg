@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#F4F3F1"/>
+  <rect x="130" y="50" width="140" height="140" rx="4" stroke="#68756D" stroke-width="3" fill="none"/>
+  <line x1="176" y1="50" x2="176" y2="190" stroke="#68756D" stroke-width="3"/>
+  <line x1="224" y1="50" x2="224" y2="190" stroke="#68756D" stroke-width="3"/>
+  <line x1="130" y1="97" x2="270" y2="97" stroke="#68756D" stroke-width="3"/>
+  <line x1="130" y1="143" x2="270" y2="143" stroke="#68756D" stroke-width="3"/>
+  <text x="153" y="115" fill="#B57B66" font-family="system-ui,sans-serif" font-size="28" font-weight="700">X</text>
+  <text x="201" y="165" fill="#68756D" font-family="system-ui,sans-serif" font-size="28" font-weight="700">O</text>
+  <text x="200" y="220" text-anchor="middle" fill="#68756D" font-family="system-ui,sans-serif" font-size="18" font-weight="600">TIC-TAC-TOE</text>
+</svg>

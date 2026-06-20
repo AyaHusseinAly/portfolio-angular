@@ -42,7 +42,7 @@ export const profile = {
   linkedinHandle: 'fatma-tarek-77729b118',
   whatsapp: 'https://wa.me/201099820528',
   whatsappDisplay: '+20 109 982 0528',
-  photoUrl: '76849214.jpeg',
+  photoUrl: 'profile-photo.jpeg',
   resumeUrl: '',
   summary:
     'Full stack developer with 4+ years of experience delivering enterprise and consumer applications. Currently at ULTATEL, specializing in Angular, NestJS, and cross-platform mobile development with Ionic and Swift.',

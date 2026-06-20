@@ -1,18 +1,17 @@
-import { Pipe, PipeTransform, inject } from '@angular/core';
-import { APP_BASE_HREF } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'assetUrl',
 })
 export class AssetUrlPipe implements PipeTransform {
-  private readonly baseHref = inject(APP_BASE_HREF);
+  constructor(@Inject(DOCUMENT) private readonly document: Document) {}
 
   transform(path: string): string {
     if (!path || path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) {
       return path;
     }
 
-    const base = this.baseHref.endsWith('/') ? this.baseHref : `${this.baseHref}/`;
-    return `${base}${path.replace(/^\//, '')}`;
+    return new URL(path.replace(/^\//, ''), this.document.baseURI).href;
   }
 }

@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { projectFilters, projects } from '../../data/portfolio.data';
+import { AssetUrlPipe } from '../../pipes/asset-url.pipe';
 
 @Component({
   selector: 'app-projects',
+  imports: [AssetUrlPipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })

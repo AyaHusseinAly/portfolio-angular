@@ -15,7 +15,7 @@
           <div class="exp-card" [class]="'exp-card--' + job.shape">
             <div class="exp-card__shape" aria-hidden="true"></div>
             <div class="exp-card__header">
-              <img [src]="job.logo" [alt]="job.company + ' logo'" width="48" height="48" />
+              <img [src]="job.logo | assetUrl" [alt]="job.company + ' logo'" width="48" height="48" />
               <div>
                 <h3>{{ job.company }}</h3>
                 <p class="exp-card__role">{{ job.role }}</p>

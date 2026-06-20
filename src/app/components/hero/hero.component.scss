@@ -75,6 +75,7 @@
 .shape-card__accent {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: linear-gradient(135deg, rgba(222, 206, 191, 0.6), rgba(161, 167, 158, 0.25));
   clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
   border-radius: 1.5rem;
@@ -83,17 +84,20 @@
 
 .hero__avatar-wrap {
   position: relative;
-  width: 280px;
+  z-index: 1;
+  width: min(220px, 72vw);
   aspect-ratio: 1;
+  flex-shrink: 0;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
     border-radius: 50%;
     border: 3px solid var(--terracotta);
-    position: relative;
-    z-index: 1;
+    background: var(--bg-elevated);
+    box-shadow: 0 12px 32px var(--shadow);
   }
 }
 
@@ -214,6 +218,19 @@
   }
 
   .hero__avatar-wrap {
-    width: 220px;
+    width: min(200px, 65vw);
+  }
+
+  .hero__role span {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 6rem;
+    min-height: auto;
   }
 }

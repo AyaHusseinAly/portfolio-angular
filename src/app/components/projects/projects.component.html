@@ -22,7 +22,7 @@
       @for (project of filteredProjects(); track project.id) {
         <article class="project-card" [class]="'project-card--' + project.shape">
           <div class="project-card__image">
-            <img [src]="project.image" [alt]="project.title" width="400" height="240" />
+            <img [src]="project.image | assetUrl" [alt]="project.title" width="400" height="240" />
             <span class="project-card__category">{{ project.category }}</span>
           </div>
           <div class="project-card__body">

@@ -11,7 +11,13 @@
       <div class="shape-card__accent"></div>
       <div class="hero__avatar-wrap">
         <div class="hero__avatar-ring"></div>
-        <img [src]="profile.photoUrl" [alt]="profile.name" width="280" height="280" />
+        <img
+          [src]="photoUrl | assetUrl"
+          [alt]="profile.name"
+          width="220"
+          height="220"
+          (error)="onPhotoError()"
+        />
       </div>
     </div>
 

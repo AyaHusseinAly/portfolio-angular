@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 import { profile } from '../../data/portfolio.data';
-import { AssetUrlPipe } from '../../pipes/asset-url.pipe';
+import { assetUrl } from '../../utils/asset-url';
 
 @Component({
   selector: 'app-hero',
-  imports: [AssetUrlPipe],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
   readonly profile = profile;
-  photoUrl = profile.photoUrl;
+  photoUrl = assetUrl(profile.photoUrl);
 
   onPhotoError(): void {
-    if (this.photoUrl !== 'profile-placeholder.svg') {
-      this.photoUrl = 'profile-placeholder.svg';
+    if (!this.photoUrl.endsWith('profile-placeholder.svg')) {
+      this.photoUrl = assetUrl('profile-placeholder.svg');
     }
   }
 }

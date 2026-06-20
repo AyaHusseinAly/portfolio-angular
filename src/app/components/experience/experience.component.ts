@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { experience } from '../../data/portfolio.data';
-import { AssetUrlPipe } from '../../pipes/asset-url.pipe';
+import { experience, Experience } from '../../data/portfolio.data';
+import { assetUrl } from '../../utils/asset-url';
 
 @Component({
   selector: 'app-experience',
-  imports: [AssetUrlPipe],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss',
 })
 export class ExperienceComponent {
-  readonly experience = experience;
+  readonly experience: Experience[] = experience.map((job) => ({
+    ...job,
+    logo: assetUrl(job.logo),
+  }));
 }
